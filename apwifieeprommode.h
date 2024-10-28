@@ -121,6 +121,7 @@ bool lastRed()
             cnt++;
         }
         if (WiFi.status() == WL_CONNECTED)
+            Serial.println("Conectado a Red Wifi");
             break;
     }
     if (WiFi.status() == WL_CONNECTED)
