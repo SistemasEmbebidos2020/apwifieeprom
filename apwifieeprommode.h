@@ -159,8 +159,10 @@ void intentoconexion(const char *apname, const char *appassword)
     Serial.println("ingreso a intentoconexion");
     if (!lastRed())
     {                               // redirige a la funcion
+        
+        Serial.println("Conectarse desde su celular a la red creada");
         Serial.println("en el navegador colocar la ip:");
-        Serial.println(WiFi.localIP());
+        Serial.println("192.168.4.1");
         initAP(apname, appassword); // nombre de wifi a generarse y contrasena
     }
     while (WiFi.status() != WL_CONNECTED) // mientras no se encuentre conectado a un red
