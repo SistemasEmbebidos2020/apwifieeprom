@@ -120,10 +120,11 @@ bool lastRed()
             Serial.print(".");
             cnt++;
         }
-        if (WiFi.status() == WL_CONNECTED)
+        if (WiFi.status() == WL_CONNECTED){
             Serial.println("Conectado a Red Wifi");
             Serial.println(WiFi.localIP());
             break;
+        }
     }
     if (WiFi.status() == WL_CONNECTED)
         return true;
